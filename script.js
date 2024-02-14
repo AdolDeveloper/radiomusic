@@ -331,15 +331,15 @@ const textoContainer = document.getElementById('texto-container');
 // Obtener referencia al botón de reproducción
 const playBtn = document.querySelector('.play-btn');
 
-// Función para manejar el evento de clic en el botón de reproducción
 playBtn.addEventListener('click', function() {
-    // Crear un elemento de texto
-    const texto = document.createElement('h1');
-    texto.textContent = '❤️ LA AMO MI ROSMY ❤️';
-    texto.style.textAlign = 'center';
-    texto.style.fontFamily = 'cursive';
-    texto.style.color = 'black';
-  
-    // Agregar el texto al contenedor
-    textoContainer.appendChild(texto);
+  // Crear un elemento de texto
+  const texto = document.createElement('h1');
+  texto.textContent = '❤️ LA AMO MI ROSMY ❤️';
+  texto.style.textAlign = 'center';
+  texto.style.fontFamily = 'cursive';
+  texto.style.color = 'black';
+  texto.style.marginTop = '100px'; // Agregar margen
+
+  // Agregar el texto al contenedor
+  textoContainer.appendChild(texto);
 });
