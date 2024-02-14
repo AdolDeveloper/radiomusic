@@ -311,11 +311,23 @@ const RESET = () => {
     '<').
     timeScale(1);
   });
+
+  // Obtener referencia al elemento de texto
+  const texto = document.querySelector('#texto-container h1');
+  // Verificar si el elemento existe antes de intentar eliminarlo
+  if (texto) {
+      // Eliminar el elemento de texto del contenedor
+      texto.remove();
+  }
 };
 
 // Bind things up
 AUDIO.addEventListener('play', FADE_IN_OUT);
-AUDIO.addEventListener('ended', RESET);
+AUDIO.addEventListener('ended', function() {
+    FADE_IN_OUT();
+    RESET();
+});
+
 
 // Obtener referencia al contenedor del texto
 const textoContainer = document.getElementById('texto-container');
